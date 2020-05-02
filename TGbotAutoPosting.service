@@ -1,9 +1,11 @@
 [Unit]
-Description=Авто постинг телеграм бот
+Description=AutoPostingTG
+After=multi-user.target
 
 [Service] 
-Type=simple
-ExecStart=/home/adam/autoPostingBotTG/main.py
+Type=idle
+ExecStart=/usr/bin/python3 /home/adam/autoPostingBotTG/main.py
+Restart=always
 
 [Install]
-WantedBy=multi-user.target 
+WantedBy=multi-user.target
