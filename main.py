@@ -1,14 +1,12 @@
-#!/usr/bin/python
 import telebot
 import datetime
-import time
 
 TOKEN = '1203398903:AAH8GA4fF4xmaNVR82-sTJ1otvAzyvxxyIk'
 
 date = ["06.13", "12.13", "17.13", "01.13"]
 chat_id = -1001341971473
 user_id = 445671495
-n = 9
+n = 11
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -40,8 +38,6 @@ while True:
                     bot.send_video(chat_id=chat_id, data=date)
                     bot.send_message(chat_id=user_id, text=n)
                     n += 1
-                    time.sleep(1000)
                     break
                 else:
-                    time.sleep(1000)
                     break
